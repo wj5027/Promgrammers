@@ -1,0 +1,16 @@
+class Solution {
+    public String solution(int age) {
+        String answer = "";
+        String strAge = Integer.toString(age);
+        char[] chArr = strAge.toCharArray();
+        int cnt =0;
+
+        while(cnt < chArr.length){
+            answer += (char)((int)(chArr[cnt])+49);
+            cnt++;
+        }
+        
+        return answer;
+    }
+    
+}

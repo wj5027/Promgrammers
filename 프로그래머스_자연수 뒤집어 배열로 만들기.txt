@@ -1,0 +1,22 @@
+import java.util.*;
+
+class Solution {
+    public int[] solution(long n) {
+        int[] answer = {};
+        String str = Long.valueOf(n).toString(); //long->String 형변환
+        int lth = str.length(); //길이
+        answer = new int[lth];
+        char[] chArr = str.toCharArray();
+        List<Character> list = new ArrayList<>();
+        
+        for(char ch : chArr){
+            list.add(ch);
+        }
+        Collections.reverse(list);
+        
+        for(int i=0; i<list.size(); i++){
+            answer[i] = Character.getNumericValue(list.get(i));
+        }
+        return answer;
+    }
+}
