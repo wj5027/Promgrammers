@@ -1,0 +1,20 @@
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] emergency) {
+        int[] answer = {};
+        answer = new int[emergency.length];
+        
+        for(int i=0; i<emergency.length; i++){
+            answer[i] = 1;	//일단 1순위로 다 세팅
+            for(int x=0;x<emergency.length;x++){
+                if(emergency[i] < emergency[x]){
+                    answer[i] = answer[i]+1;	//i번째가 작으면 순위 1씩 늘리기
+                }   
+            }
+        }
+        
+        return answer;
+    }
+}
+
