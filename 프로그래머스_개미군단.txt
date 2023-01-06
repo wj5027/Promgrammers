@@ -1,0 +1,13 @@
+class Solution {
+    public int solution(int hp) {
+        int jg = 0; //장군개미
+        int bj = 0 ; //병정개미
+        int il = 0; //일개미
+    
+        jg = hp/5;
+        bj = (hp%5)/3;
+        il = (hp%5)%3==0? 0 : (hp%5)%3;
+        
+        return jg+bj+il;
+    }
+}
