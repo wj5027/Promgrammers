@@ -1,0 +1,17 @@
+import java.lang.*;
+import java.math.*;
+class Solution {
+    public BigInteger solution(long balls, long share) {
+        BigInteger n = BigInteger.ONE;
+        BigInteger m = BigInteger.ONE;
+        
+        for(long i=balls; i>=balls-share+1; i--){
+             n = n.multiply(BigInteger.valueOf(i));
+        }
+        for(long i=share;i>=1;i--){
+           m = m.multiply(BigInteger.valueOf(i));
+        }
+        
+        return n.divide(m);
+    }
+}
