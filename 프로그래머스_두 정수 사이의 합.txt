@@ -1,0 +1,23 @@
+class Solution {
+    public long solution(int a, int b) {
+        long answer = 0;
+        //a>b인 경우
+        if(a>b){
+            for(int i=b; i<=a; i++){
+                answer += Long.valueOf(i);
+            }
+        }
+        //a==b인 경우
+        if(a==b){
+            answer = Long.valueOf(a);
+        }
+        //a<b인 경우
+        if(a<b){
+            for(int i=a; i<=b; i++){
+                answer += Long.valueOf(i);
+            }
+        }
+        return answer;
+    }
+}
+

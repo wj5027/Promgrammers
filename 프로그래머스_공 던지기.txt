@@ -1,0 +1,17 @@
+class Solution {
+    public int solution(int[] numbers, int k) {
+        int answer = 0;
+        int cnt = 1;	//1번째부터 시작하므로
+        
+        for(int i=0; ; i+=2){
+            i %= numbers.length;	//numbers길이 넘어간 후에 처음으로 돌아와 인덱스 찾기위함
+            if(cnt==k){
+                answer = numbers[i];
+                break;
+            }
+            cnt++;
+        }
+        
+        return answer;
+    }
+}
